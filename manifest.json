@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "20260530025815",
   "feedCount": 2893,
+  "contentHash": "073814210dd6b6c3c6fd971b9081d9fd4a9cf004035dc4582c5e4db21ed57f57",
   "bundle": {
     "path": "feed-directory.json",
     "bytes": 982918,
