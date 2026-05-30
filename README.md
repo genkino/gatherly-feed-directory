@@ -27,16 +27,20 @@ URL만 입력하면 자동으로 피드를 찾아 구독합니다. 복잡한 설
   "schemaVersion": 1,
   "generatedAt": "20260530025815",
   "feedCount": 2893,
+  "contentHash": "<sha256 of feeds content, timestamp-independent>",
   "bundle": {
     "path": "feed-directory.json",
     "bytes": 982918,
-    "sha256": "cc75954d9cc071bb1f645d72d2e22da3ae11d29f81fdc5881808763e14aae333"
+    "sha256": "<sha256 of feed-directory.json bytes>"
   }
 }
 ```
 
-앱은 작은 `manifest.json` 만 주기적으로 폴링하고, `bundle.sha256` 가 바뀌었을 때만
-`feed-directory.json` 전체를 내려받습니다. (대역폭 절약 — manifest-poll 패턴)
+- **`contentHash`**: 피드 내용만의 해시 (생성 시각 영향 없음). 앱은 이 값이 바뀌었을 때만
+  `feed-directory.json` 전체를 내려받습니다. (대역폭 절약 — manifest-poll 패턴)
+- **`bundle.sha256`**: 내려받은 파일 바이트의 해시. 다운로드 무결성 검증용.
+
+앱은 작은 `manifest.json` 만 주기적으로 폴링합니다.
 
 ## 🔄 Updates
 
