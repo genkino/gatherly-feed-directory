@@ -46,9 +46,22 @@ URL만 입력하면 자동으로 피드를 찾아 구독합니다. 복잡한 설
 
 - GitHub Actions가 **하루 1회** 자동 수집·검증 후, 내용이 바뀐 경우에만 이 저장소를 갱신합니다.
 - 게시 URL:
-  - **raw**: `https://raw.githubusercontent.com/genkino/gatherly-feed-directory/main/feed-directory.json`
-  - **CDN (jsDelivr)**: `https://cdn.jsdelivr.net/gh/genkino/gatherly-feed-directory@main/feed-directory.json`
+  - **권장 CDN (jsDelivr)**: `https://cdn.jsdelivr.net/gh/genkino/gatherly-feed-directory@main/feed-directory.json`
+  - **raw GitHub (직접 원본)**: `https://raw.githubusercontent.com/genkino/gatherly-feed-directory/main/feed-directory.json`
   - manifest: 위 URL에서 파일명만 `manifest.json` 으로 교체
+
+## ⚠️ Usage Guidance
+
+- 이 저장소는 **공개 저장소**이므로 누구나 파일을 조회할 수 있습니다.
+- 다만 `raw.githubusercontent.com` 원본 URL을 앱이나 서비스에서 대규모로 직접 참조하면,
+  트래픽이 원본 호스트에 집중되어 속도·안정성·캐시 효율 측면에서 불리할 수 있습니다.
+- **프로덕션 환경에서는 raw GitHub 대신 CDN URL 또는 서비스 운영자가 직접 관리하는 캐시/미러를 사용해 주세요.**
+- Gatherly 앱도 원본 저장소를 직접 폴링하지 않고, 캐시 계층을 둔 URL을 통해 디렉터리를 참조합니다.
+- `raw.githubusercontent.com` URL은 사람이 내용을 확인하거나, 소규모 테스트/디버깅 용도로만 사용하는 것을 권장합니다.
+
+> This repository is public, but direct high-volume use of `raw.githubusercontent.com`
+> is discouraged. For production use, please use a CDN or your own caching layer
+> instead of hitting the origin directly.
 
 ## 📜 License
 
