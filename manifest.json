@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "20260602182333",
+  "generatedAt": "20260603184026",
   "feedCount": 2934,
-  "contentHash": "25f71a9e75a91c2ada0bd83e20189fc5b131d997f562b3a27fe90178f3da57ea",
+  "contentHash": "6fc919a1d2c9ed638c98e4973ab6e5b26d2ef93dcdead656f803e75e4d4959e9",
   "bundle": {
     "path": "feed-directory.json",
-    "bytes": 990882,
-    "sha256": "4b7df9b1238913120a9b495082782b9d2ccff4ca619e53e6cfea8c1e5288453d"
+    "bytes": 998718,
+    "sha256": "e54bec61b02491ea7f18d6ca43c9071eceb6a4cb9a0818b9d1b16539d8a42dd5"
   }
 }
